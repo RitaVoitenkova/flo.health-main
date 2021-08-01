@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <meta charset="UTF-8">
+  <title>Reg</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+  <meta charset="UTF-8">
+  <title>Reg</title>
+</head>
+<body>
+
+<div class="row d-flex justify-content-center">
+  <div class="col-6 justify-content-center">
+    <form th:action="@{/user/reg}" th:object="${userRegDto}" method="POST" class="row g-6">
+      <div class="col-md-12">
+        <label for="Email" class="form-label">Email</label>
+        <input th:field="*{emailRegDTO}" type="text" class="form-control" id="Email" placeholder="example@gmail.ru">
+      </div>
+      <div class="col-md-12">
+        <label for="Email" class="form-label">Username</label>
+        <input th:field="*{nameRegDTO}" type="text" class="form-control" id="Username">
+      </div>
+      <div class="col-12">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input th:field="*{passwordRegDTO}" type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-12 mt-2">
+        <button class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+
+
+<!--<div class="row d-flex justify-content-center">-->
+<!--  <div class="col-6 justify-content-center">-->
+<!--    <form th:action="@{/user/reg}" th:object="${userRegDto}" method="POST" class="row g-6">-->
+<!--      <p><input type="text" th:field="*{nameRegDTO}" placeholder="Name"/></p>-->
+<!--      <p th:if="${#fields.hasErrors('nameRegDTO')}" th:errors="*{nameRegDTO}">You need to enter more characters</p>-->
+<!--        <p><input type="text" th:field="*{emailRegDTO}" placeholder="Email"/></p>-->
+<!--        <p th:if="${#fields.hasErrors('emailRegDTO')}" th:errors="*{emailRegDTO}">You need to enter more characters</p>-->
+<!--        <p><input type="text" th:field="*{passwordRegDTO}" placeholder="Password"/></p>-->
+<!--        <p th:if="${#fields.hasErrors('passwordRegDTO')}" th:errors="*{passwordRegDTO}">You need to enter more characters</p>-->
+<!--      <div class="col-12 mt-2">-->
+<!--        <p><input type="radio" name="roleRegDTO" th:value="USER" checked>USER</p>-->
+<!--        <p><input type="radio" name="roleRegDTO" th:value="ADMIN">ADMIN</p>-->
+<!--      </div>-->
+<!--        <div class="col-12 mt-2">-->
+<!--        <p><input type="radio" name="statusDTO" th:value="YOURCYCLE" checked>YOURCYCLE</p>-->
+<!--        <p><input type="radio" name="statusDTO" th:value="WANTPREGNANT" checked>WANTPREGNANT</p>-->
+<!--        <p><input type="radio" name="statusDTO" th:value="PREGNANT" checked>PREGNANT</p>-->
+<!--        <button class="btn btn-primary">Sign in</button>-->
+<!--      </div>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+</body>
+</html>
+
+<!--<form th:action="@{/user/reg}" th:object="${userReg}" method="post">-->
+<!--  <p><input type="text" th:field="*{nameRegDTO}" placeholder="Login"/></p>-->
+<!--  <p th:if="${#fields.hasErrors('nameRegDTO')}" th:errors="*{nameRegDTO}">You need to enter more characters</p>-->
+<!--  <p><input type="password" th:field="*{passwordRegDTO}" placeholder="Password"/></p>-->
+<!--  <p th:if="${#fields.hasErrors('passwordRegDTO')}" th:errors="*{passwordRegDTO}">You need to enter more characters</p>-->
+<!--  <p><input type="text" th:field="*{emailRegDTO}" placeholder="e-mail"/></p>-->
+<!--  <p th:if="${#fields.hasErrors('emailRegDTO')}" th:errors="*{emailRegDTO}">You need to enter more characters</p>-->
+<!--  <p><input type="radio" name="roleRegDTO" th:value="USER" checked>USER</p>-->
+<!--  <p><input type="radio" name="roleRegDTO" th:value="ADMIN">ADMIN</p>-->
+<!--  <p><input type="radio" name="statusDTO" th:value="YOURCYCLE" checked>YOURCYCLE</p>-->
+<!--  <p><input type="radio" name="statusDTO" th:value="WANTPREGNANT">WANTPREGNANT</p>-->
+<!--  <p><input type="radio" name="statusDTO" th:value="PREGNANT">PREGNANT</p>-->
+<!--  <button type="submit">Registration</button>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
