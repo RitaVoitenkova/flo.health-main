@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
 <p>Home</p>
+<a href="/user/login">Auth</a>
+<a href="/user/reg">Reg</a>
+<form th:action="@{/user/logout}" method="post">
+    <button>Log out</button>
+</form>
+<a href="/calend">Calend</a>
+
+<!--<div class="row d-flex justify-content-center">-->
+<!--    <div class="col-6 justify-content-center">-->
+<!--        <form th:action="@{/user/home}" method="post">-->
+<!--            <div><label> User Name : <input type="text" name="username"/> </label></div>-->
+<!--            <div><label> Email : <input type="text" name="email"/> </label></div>-->
+<!--            <div><label> Password: <input type="password" name="password"/> </label></div>-->
+<!--            <div><input type="submit" value="Sign In"/></div>-->
+<!--        </form>-->
+
+<!--    </div>-->
+</div>
+
+
 </body>
 </html>
+<!--<div>-->
+<!--    <form th:action="@{/user}" method="post">-->
+<!--        <button>LOGOUT</button>-->
+
+<!--        <section th:each="user : ${users}">-->
+<!--            <p th:text="${user}"></p>-->
+<!--            <ul>-->
+<!--                <li th:each="phone: ${user}"></li>-->
+<!--            </ul>-->
+<!--        </section>-->
+<!--    </form>-->
+<!--</div>-->
